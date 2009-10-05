@@ -1,0 +1,34 @@
+require 'compass'
+
+Compass.configuration do |config|
+  config.project_path = File.dirname(__FILE__)
+  config.sass_dir = File.join('content', 'stylesheets' )
+  config.images_dir = "images"
+  
+  # # Require any additional compass plugins here.
+  #   project_type = :stand_alone
+  #   # Set this to the root of your project when deployed:
+  #   http_path = "/"
+  #   css_dir = "stylesheets"
+  #   sass_dir = "src"
+  #   output_style = :compact
+  #   # To enable relative paths to assets via compass helper functions. Uncomment:
+  #   # config.relative_assets = true
+  
+end
+
+Webby.site.sass_options.update(Compass.sass_engine_options)
+
+task :default => :build
+
+SITE.name = ""
+SITE.user = "seandunn"
+SITE.host = ""
+SITE.remote_dir = "/www/#{SITE.name}/public"
+
+task :default => :build
+
+desc 'deploy the site to the webserver'
+task :deploy => [:build, 'deploy:rsync']
+
+# EOF
