@@ -7,14 +7,14 @@ layout: nil
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <% @pages.find( :all, :sitemap => true ).each do |page| %>
   <url>
-    <loc>http://<%= SITE.name %>/<%= page.url %></loc>
+    <loc>http://<%= SITE.name %><%= page.url %></loc>
     <lastmod><%= page.mtime.strftime("%Y-%m-%d") %></lastmod>
-    <% if page.changefreq %>
+  <%- if page.changefreq -%>
     <changefreq><%= @page.changefreq %></changefreq>
-    <% end %>
-    <% if page.priority %>
+  <%- end -%>
+  <%- if page.priority -%>
     <priority><%= page.priority %></priority>
-    <% end %>
+  <%- end -%>
   </url>
   <% end %>
 </urlset
