@@ -18,13 +18,13 @@ filter:    erb
    <![endif]-->
    
 </head>
-<body>
+<body class="three-col bp">
 
 <div class="container">
 
    <div id="header">
      <p class="title">A New Website</p>
-     <hr>
+     <hr/>
    </div>
 
    <div id="content">
