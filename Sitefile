@@ -22,7 +22,7 @@ Webby.site.sass_options.update(Compass.sass_engine_options)
 task :default => :build
 
 SITE.name = ""
-SITE.user = "seandunn"
+SITE.user = ""
 SITE.host = ""
 SITE.remote_dir = "/www/#{SITE.name}/public"
 
