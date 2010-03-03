@@ -1,0 +1,4 @@
+A template project integrating Webby [http://webby.rubyforge.org/], Compass [http://compass-style.org/] and Blueprint CSS [http://blueprintcss.org/].
+
+To use
+  git clone git://github.com/seandunn/webby_compass_template.git
