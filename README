@@ -2,3 +2,9 @@ A template project integrating Webby [http://webby.rubyforge.org/], Compass [htt
 
 To use
   git clone git://github.com/seandunn/webby_compass_template.git
+  
+Once you've got the new project, rename the directory to whatever you want and use the usual webby commands to build the webby site.
+
+To start a local webserver showing your site:
+
+  webby autobuild
